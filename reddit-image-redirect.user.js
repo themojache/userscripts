@@ -14,7 +14,7 @@
 // ==/UserScript==
 
 function fixImageLink(link, real = true) {
-  var url = link.search && link.hostname && link.pathname ? link : new URL(link, window.location);
+  var url = link.search && link.hostname && link.pathname ? link : new URL(link, window.location.href);
   let sp = url.searchParams ? url.searchParams : new URLSearchParams(url.search);
   if(url.hostname == "preview.redd.it") {
     url.hostname = "i.redd.it";
