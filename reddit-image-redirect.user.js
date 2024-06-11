@@ -30,7 +30,7 @@ function fixImageLink(link, real = true) {
   return url.href;
 }
 function blobToBase64(image) {
-	return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     var reader = new FileReader();
     reader.onloadend = (e) => {
       if(e.target.error) {
@@ -42,7 +42,7 @@ function blobToBase64(image) {
       }
     };
     reader.readAsDataURL(image);
-	});
+  });
 }
 function addTo(new1, old1) {
   return old1.parentNode.insertBefore(new1, old1);
